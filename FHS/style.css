@@ -15,6 +15,7 @@ body {
     background-size: 40vw, 15em;
     color: var(--blue);
     flex-flow: column wrap;
+    font-family: "Raleway", sans-serif;
     justify-content: center;
     margin: 10vh auto;
     width: 100%;
