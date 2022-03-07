@@ -1,3 +1,67 @@
-.hidden {
-    display: none;
+/* -------------------VARIABLES------------------- */
+:root {
+    --blue: hsl(210, 40%, 25%, 1);
+    --opaque: hsl(210, 40%, 95%, 0.5);
+    --highlight: hsl(40, 100%, 30%, 1);
 }
+
+/* --------------------GENERAL-------------------- */
+body {
+    display: flex;
+    align-items: center;
+    background-image: url("https://fallschurchhs.fcps.edu/sites/default/files/logo.png");
+    background-position: 50% 50%, left top;
+    background-repeat: no-repeat, repeat;
+    background-size: 40vw, 15em;
+    color: var(--blue);
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 10vh auto;
+    width: 100%;
+}
+
+h1 { margin-bottom: 0; }
+h2 { margin-top: 0; }
+
+.active, .hidden { transition: all 150s ease-in-out; }
+.hidden { display: none; }
+
+/* --------------------BUTTONS-------------------- */
+#buttons {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#buttons a, #copy, #fake-button {
+    display: inline-block;
+    border: 2px solid var(--blue);
+    border-radius: .5em;
+    box-shadow: 0 0 40px 40px var(--blue) inset, 0 0 0 0 var(--blue);
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(.5rem, 1rem, 1.5rem);
+    font-weight: 400;
+    margin: .25em;
+    min-width: 10vw;
+    padding: .5em 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+}
+
+/* **********EFFECTS********** */
+#buttons .active, #copy:hover, #copy:focus,
+#buttons a:hover, #buttons a:focus {
+    box-shadow: 0 0 10px 0 var(--blue) inset, 0 0 10px 4px var(--blue);
+    color: var(--blue);
+    font-weight: 700;
+    outline: 0;
+}
+
+/* ---------------------PAGES--------------------- */
+
+/* --------------------TOOLTIPS------------------- */
