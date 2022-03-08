@@ -103,6 +103,14 @@ h2 { margin-top: 0; }
     z-index: 2;
 }
 
+[data-is-original=false] {
+    color: blue;
+    cursor: pointer;
+    position: relative;
+    transition: all 150ms ease-in-out;
+    z-index: 2;
+}
+
 [data-tooltip]:hover {
     color: yellow;
     cursor: pointer;
