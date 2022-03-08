@@ -3,6 +3,7 @@
     --blue: hsl(210, 40%, 25%, 1);
     --opaque: hsl(210, 40%, 95%, 0.5);
     --highlight: hsl(40, 100%, 30%, 1);
+    --gold: hsl(46, 65%, 52%, 1);
 }
 
 /* --------------------GENERAL-------------------- */
@@ -26,6 +27,7 @@ h2 { margin-top: 0; }
 
 .active, .hidden { transition: all 150s ease-in-out; }
 .hidden { display: none; }
+::selection { background: white; }
 
 /* --------------------BUTTONS-------------------- */
 #buttons {
@@ -63,6 +65,108 @@ h2 { margin-top: 0; }
     outline: 0;
 }
 
+/* -------------------CONTAINER------------------- */
+#container {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(.25em);
+    -webkit-backdrop-filter: blur(.25em);
+    background: var(--opaque);
+    border: 3px solid var(--gold);
+    border-radius: .5em;
+    box-shadow: inset 0 0 2em var(--blue);
+    flex-flow: column nowrap;
+    height: 50%;
+    justify-content: center;
+    padding: 1em;
+    width: 80%;
+}
+
+#container header, #container div {
+    text-align: center;
+}
+
 /* ---------------------PAGES--------------------- */
+#dues #details {
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
+
+.page { font-size: clamp(1rem, 1.25rem, 3.5rem); }
+
+/* **********TOOLTIP********** */
+[data-tooltip] {
+    color: var(--highlight);
+    cursor: pointer;
+    position: relative;
+    transition: all 150ms ease-in-out;
+    z-index: 2;
+}
+
+[data-tooltip]:hover {
+    color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+[data-tooltip]::before, [data-tooltip]::after {
+    opacity: 0;
+    visibility: hidden;
+}
+
+[data-tooltip]::before {
+    background-color: var(--blue);
+    border-radius: .5em;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    bottom: 100%;
+    left: 75%;
+    color: white;
+    content: attr(data-tooltip);
+    font-size: 14px;
+    margin: 0 0 5px -80px;
+    padding: .25em .5em;
+    position: absolute;
+    text-align: center;
+    width: 8em;
+}
+
+[data-tooltip]::after {
+    border-top: 5px solid var(--blue);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    bottom: 100%;
+    content: " ";
+    font-size: 0;
+    left: 50%;
+    line-height: 0;
+    position: absolute;
+}
+
+[data-tooltip]:hover::before, [data-tooltip]:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ***********VIDEO*********** */
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.video-container::after {
+    display: block;
+    content: '';
+    padding-top: 56.25%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 
 /* --------------------TOOLTIPS------------------- */
