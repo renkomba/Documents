@@ -41,7 +41,7 @@ const tooltipDict = {
     'le lien': ['link', '« groupes »'],
     'des lumières': ['of enlightenment', 'du savoir'],
     'mater': ['to watch', 'regarder'],
-    'au Préfabriqué': ['in Trailer', 'dans la salle de classe dans le parking'],
+    'dans le Préfabriqué': ['in Trailer', 'dans la salle de classe dans le parking'],
     'Premières': ['Juniors', 'élèves en 11e année'],
     'Puis': ['Then', '3) '],
     'Secondes': ['Sophomores', 'élèves en 10e année'],
@@ -78,7 +78,6 @@ const activateTooltips = () => {
 }
 
 /* DISPLAY */
-const pages = document.querySelectorAll('.page');
 const copyButton = document.querySelector('#copy');
 
 // copy #code innerHTML to clipboard when you click on var copyButton
@@ -94,6 +93,9 @@ copyButton.addEventListener('click', () => {
 // make prior .active page .hidden
 const toggleDisplay = () => {
     buttonContainer.addEventListener('click', e => {
+        debugger;
+        console.log(e.target);
+        
         let [buttonIn, buttonOut] = [
             e.target,
             document.querySelector('.active')
@@ -106,14 +108,14 @@ const toggleDisplay = () => {
             document.querySelector(pageIdIn),
             document.querySelector(pageIdOut)
         ];
-        let [buttons, pagesInOut] = [
+        let [buttons, pages] = [
             [buttonIn, buttonOut],
             [pageIn, pageOut]
         ];
 
         for (let i=0; i<2; i++) {
             buttons[i].classList.toggle('active');
-            pagesInOut[i].classList.toggle('hidden');
+            pages[i].classList.toggle('hidden');
         }
     });
 }
