@@ -10,7 +10,7 @@
 body {
     display: flex;
     align-items: center;
-    background-image: url("https://fallschurchhs.fcps.edu/sites/default/files/logo.png");
+    background-image: url("https://fallschurchhs.fcps.edu/sites/default/files/logo.png"), url("https://i.pinimg.com/736x/1a/32/dd/1a32dd3e82695b4f19e1a26b0ef6aafe.jpg");
     background-position: 50% 50%, left top;
     background-repeat: no-repeat, repeat;
     background-size: 40vw, 15em;
