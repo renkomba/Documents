@@ -17,6 +17,10 @@ const labelButtons = () => {
 
 /* TOOLTIPS */
 const newWords = [...document.querySelectorAll('.new-word')];
+const oppositeBool = {
+    'true': 'false',
+    'false': 'true'
+}
 const tooltipDict = {
     'à droite': ['on the right', '⇨'],
     'alias': ['aka', ' / '],
@@ -48,10 +52,11 @@ const tooltipDict = {
 
 // Not accessible because assistive techs cannot read data attributes
 // for each .new-word, set its translation, simplification, and toggle
-labelTooltips = () => {
+const labelTooltips = () => {
     for (let word of newWords) {
         let text = word.textContent;
         console.log(text);
+
         word.setAttribute('data-tooltip', tooltipDict[text][0]);
         word.setAttribute('data-simpler-word', tooltipDict[text][1]);
         word.setAttribute('data-original-word', text);
@@ -59,6 +64,62 @@ labelTooltips = () => {
     }
 }
 
+const activateTooltips = () => {
+    for (let word of newWords) {
+        word.addEventListener('click', () => {
+            let isOriginal = word.dataset.isOriginal;
+
+            word.dataset.isOriginal = oppositeBool[isOriginal];
+
+            word.innerHTML = isOriginal === 'true' ?
+                word.dataset.simplerWord : word.dataset.originalWord;
+        });
+    }
+}
+
+/* DISPLAY */
+const pages = document.querySelectorAll('.page');
+const copyButton = document.querySelector('#copy');
+
+// copy #code innerHTML to clipboard when you click on var copyButton
+copyButton.addEventListener('click', () => {
+    let schoologyCode = document.querySelector('#code').innerHTML;
+    
+    navigator.clipboard.writeText(schoologyCode)
+        .then( () => console.log(`a copié « ${schoologyCode} » !`) )
+        .catch( err => console.error(`Couldn't copy. Try again./nERROR: ${err}`) );
+});
+
+// if button is clicked, make its data-dest-page to .active
+// make prior .active page .hidden
+const toggleDisplay = () => {
+    buttonContainer.addEventListener('click', e => {
+        let [buttonIn, buttonOut] = [
+            e.target,
+            document.querySelector('.active')
+        ];
+        let [pageIdIn, pageIdOut] = [
+            buttonIn.dataset.destPage,
+            buttonOut.dataset.destPage
+        ];
+        let [pageIn, pageOut] = [
+            document.querySelector(pageIdIn),
+            document.querySelector(pageIdOut)
+        ];
+        let [buttons, pagesInOut] = [
+            [buttonIn, buttonOut],
+            [pageIn, pageOut]
+        ];
+
+        for (let i=0; i<2; i++) {
+            buttons[i].classList.toggle('active');
+            pagesInOut[i].classList.toggle('hidden');
+        }
+    });
+}
+
 /* RUN FUNCTIONS */
 labelButtons();
 labelTooltips();
+toggleDisplay();
+activateTooltips();
