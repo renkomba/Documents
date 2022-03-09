@@ -89,7 +89,7 @@ copyButton.addEventListener('click', () => {
         .catch( err => console.error(`Couldn't copy. Try again./nERROR: ${err}`) );
 });
 
-// if button is clicked, make its data-dest-page to .active
+// if button is clicked, make its data-dest-page .active
 // make prior .active page .hidden
 const toggleDisplay = () => {
     buttonContainer.addEventListener('click', e => {
