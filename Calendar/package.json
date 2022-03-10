@@ -1,0 +1,135 @@
+{
+    "weeks" : [
+        {
+            "Saturday": [
+                {
+                    "description": "Staggered boxed-lunches while each staff member is at designated stations and all lanyards are ready for students. Staff should also know to re-route students with missing paperwork to Director.",
+                    "duration": "2h",
+                    "staff": "all",
+                    "startTime": "11h",
+                    "title": "Déjeuner & Arrivée des élèves"
+                },
+                {
+                    "description": "Ceremony during which Dr. Harris, Dr. Kuettner, and the Academy staff introduce themselves and the program to parents and students.",
+                    "duration": "0h45",
+                    "staff": "all",
+                    "startTime": "14h",
+                    "title": "Cérémonie d'ouverture"
+                },
+                {
+                    "description": "In the Black Box, explain the rules of the Academy in Franglais after which staff and students sign the oath.",
+                    "duration": "1h",
+                    "staff": "all",
+                    "startTime": "15h",
+                    "title": "Bienvenue & Inscriptions"
+                },
+                {
+                    "description": "Students and staff write their name on their table card and draw three things about them on the back. Then, each person introduces themself to the group.",
+                    "duration": "0h45",
+                    "staff": "all",
+                    "startTime": "16h",
+                    "title": "Etiquettes & Presentations"
+                },
+                {
+                    "description": "5 students per table with 1 staff member. Staff will engage them in conversation and encourage them to speak.",
+                    "duration": "1h",
+                    "staff": "all",
+                    "startTime": "16h45",
+                    "title": "Dîner"
+                },
+                {
+                    "description": "With music in the background, students sign up for the week's activities.",
+                    "duration": "0h30",
+                    "staff": "all teachers, RAs optional",
+                    "startTime": "17h50",
+                    "title": "Inscriptions"
+                },
+                {
+                    "description": "Variety of games: animal cries, gordian knot, passing the hoop, and trainwreck.",
+                    "duration": "1h",
+                    "staff": "all RAs, teachers optional",
+                    "startTime": "18h30",
+                    "title": "Jeux brise glace"
+                },
+                {
+                    "description": "Time for students to continue getting to know each other informally. Thay can play instruments, card games, board games, physical games, and just chat in general.",
+                    "duration": "1h",
+                    "staff": "all",
+                    "startTime": "21h",
+                    "title": "Soirée jeux"
+                }
+                
+            ],
+            "Sunday": [
+                {
+                    "description": "Combine tables so there can be 10 students per table with a teacher and RA.",
+                    "duration": "0h30",
+                    "staff": "all RAs, teachers may leave early",
+                    "startTime": "7h",
+                    "title": "Petit-déjeuner"
+                },
+                {
+                    "description": "Students who requested to attend church will be chaperoned at their services. For the others, staff will have games prepared.",
+                    "duration": "2h30",
+                    "staff": "all",
+                    "startTime": "8h15",
+                    "title": "Jeux & Églises"
+                },
+                {
+                    "description": "5 students per table with 1 staff member. Staff will engage them in conversation and encourage them to speak.",
+                    "duration": "0h45",
+                    "staff": "all",
+                    "startTime": "11h",
+                    "title": "Déjeuner"
+                },
+                {
+                    "description": "Daily half-hour to write in their journals, answer their letter, and/or record a vlog of their exeprience thus far.",
+                    "duration": "0h30",
+                    "staff": "designated",
+                    "startTime": "11h50",
+                    "title": "Journal / Vlog quotidien"
+                },
+                {
+                    "description": "Per student choice, 1h30 of choir, blog, radio, art, and maybe dance.",
+                    "duration": "1h30",
+                    "staff": "designated",
+                    "startTime": "12h30",
+                    "title": "Ateliers Creatifs"
+                },
+                {
+                    "description": "Students will partake in one of 5 activities of their choosing.",
+                    "duration": "1h",
+                    "staff": "designated",
+                    "startTime": "14h15",
+                    "title": "Activités au choix"
+                },
+                {
+                    "description": "A conversation hour with the RAs (10 students per RA) on varying topics.",
+                    "duration": "1h",
+                    "staff": "all RAs",
+                    "startTime": "15h30",
+                    "title": "Heure de conversation"
+                },
+                {
+                    "description": "5 students per table with 1 staff member. Staff will engage them in conversation and encourage them to speak.",
+                    "duration": "1h",
+                    "staff": "all",
+                    "startTime": "16h45",
+                    "title": "Dîner"
+                },
+                {
+                    "description": "Costume night during which we play games and try to guess who everyone is. Staff will come to dinner with part of their costume on, but students will not be obligated to.",
+                    "duration": "1h",
+                    "staff": "all",
+                    "startTime": "18h30",
+                    "title": "Soirée Déguisée"
+                }
+            ],
+            "Monday": [],
+            "Tuesday": [],
+            "Wednesday": [],
+            "Thursday": [],
+            "Friday": []
+        }
+    ]
+}
