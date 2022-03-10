@@ -5,6 +5,14 @@ body {
     grid-template-columns: min-content;
 }
 
+h1, h2, h3 {
+    margin: 0;
+}
+
+.hour h2 {
+    visibility: hidden;
+}
+
 #calendar {
     background-color: darkgray;
     color: white;
@@ -24,4 +32,10 @@ nav {
     grid-area: banner;
     background-color: bisque;
     padding: .5em;
+}
+
+[data-hour] {
+    color: aquamarine;
+    font-size: 24px;
+    font-weight: 700;
 }
