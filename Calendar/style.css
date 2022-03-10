@@ -1,0 +1,27 @@
+body {
+    display: grid;
+    grid-template-areas: "banner banner"
+                         "sidebar content";
+    grid-template-columns: min-content;
+}
+
+#calendar {
+    background-color: darkgray;
+    color: white;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: min-content min-content repeat(7, 2fr);
+    padding: .5em;
+}
+
+nav {
+    background-color: antiquewhite;
+    grid-area: sidebar;
+    padding: .5em;
+}
+
+#banner {
+    grid-area: banner;
+    background-color: bisque;
+    padding: .5em;
+}
