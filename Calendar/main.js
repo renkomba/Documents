@@ -1,5 +1,4 @@
-let [hour, hours, time] = [
-    document.querySelector('.hour'),
+let [hours, time] = [
     23-6,
     document.querySelector('#time')
 ];
@@ -7,8 +6,10 @@ let [hour, hours, time] = [
 const setTime = () => {
     setMinutes();
 
+    let hourDiv = document.querySelector('.hour');
+
     while (document.querySelectorAll('.hour').length < hours) {
-        time.appendChild(hour.cloneNode(true));
+        time.appendChild(hourDiv.cloneNode(true));
     }
 
     setHours();
@@ -16,19 +17,19 @@ const setTime = () => {
 
 const setMinutes = () => {
     let minutes = document.querySelectorAll('.minute');
-    debugger;
 
     for (let i=1; i<minutes.length; i++) {
         let minute = minutes[i];
-        minute.innerHTML = (minutes[i-1].innerHTML/1)+5;
+        minute.innerHTML = parseInt(minutes[i-1].innerHTML)+5;
     }
 }
 
 const setHours = () => {
-    let hourDivs = document.querySelectorAll('.hour');
+    debugger;
+    let hourDivs = [...document.querySelectorAll('[data-hour]')];
 
     for (let i=0; i<hours; i++) {
-        hourDivs[i].dataset.hour = (hourDivs[i].dataset.hour/1) + i;
+        hourDivs[i].dataset.hour = parseInt(hourDivs[i].dataset.hour) + i;
         hourDivs[i].innerHTML = hourDivs[i].dataset.hour;
     }
 }
