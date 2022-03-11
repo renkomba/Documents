@@ -9,6 +9,10 @@ h1, h2, h3 {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 .hour h2 {
     visibility: hidden;
 }
