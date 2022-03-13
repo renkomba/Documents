@@ -25,7 +25,6 @@ const setMinutes = () => {
 }
 
 const setHours = () => {
-    debugger;
     let hourDivs = [...document.querySelectorAll('[data-hour]')];
 
     for (let i=0; i<hours; i++) {
@@ -34,4 +33,34 @@ const setHours = () => {
     }
 }
 
+/* VERTICAL NAVBAR */
+const setNav = () => {
+    let [month, navList, day, days] = [
+        document.querySelector('#month'),
+        document.querySelector('ul'),
+        document.querySelector('[data-day]'),
+        document.querySelectorAll('[data-day]')
+    ];
+    
+    let dayNum = parseInt(day.dataset.day);
+    
+    day.innerHTML = dayNum;
+    month.innerHTML = month.dataset.monthFirst;
+    
+    while (dayNum !== 9) {
+        navList.appendChild(document.querySelector('[data-day]').cloneNode(true));
+        dayNum = dayNum === 30 ? 1 : dayNum+1;
+    }
+}
+
+const setDays = () => {
+    let days = document.querySelectorAll('[data-day]');
+
+    for (let i=0; i<days.length; i++) {
+        days[i].dataset.day = parseInt(days[i].dataset.day) + i;
+        days[i].innerHTML = days[i].dataset.day;
+    }
+}
+
 setTime();
+setNav();
