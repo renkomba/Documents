@@ -25,7 +25,7 @@ const setMinutes = () => {
 }
 
 const setHours = () => {
-    let hourDivs = [...document.querySelectorAll('[data-hour]')];
+    let hourDivs = document.querySelectorAll('[data-hour]');
 
     for (let i=0; i<hours; i++) {
         hourDivs[i].dataset.hour = parseInt(hourDivs[i].dataset.hour) + i;
