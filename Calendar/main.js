@@ -3,6 +3,8 @@ let [hours, time] = [
     document.querySelector('#time')
 ];
 
+// First set minutes, then for each hour until 22, duplicate
+// the .hour <div>. And then set the hour nums/data attributes
 const setTime = () => {
     setMinutes();
 
@@ -15,6 +17,7 @@ const setTime = () => {
     setHours();
 }
 
+// for each .minute, set its innerHTML to the proper num
 const setMinutes = () => {
     let minutes = document.querySelectorAll('.minute');
 
@@ -24,6 +27,8 @@ const setMinutes = () => {
     }
 }
 
+// for each .hour, set the data attribute equal the hour num
+// then set the innerHTML equal to the data attribute
 const setHours = () => {
     let hourDivs = document.querySelectorAll('[data-hour]');
 
