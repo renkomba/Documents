@@ -1,7 +1,8 @@
 body {
     display: grid;
     grid-template-areas: "banner banner"
-                         "sidebar content";
+                         "sidebar content"
+                         "footer footer";
     grid-template-columns: min-content;
 }
 
@@ -42,4 +43,14 @@ nav {
     color: aquamarine;
     font-size: 24px;
     font-weight: 700;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: .5em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: darkkhaki;
 }
