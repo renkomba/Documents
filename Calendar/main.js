@@ -1,3 +1,4 @@
+/* -----TIME----- */
 let [hours, time] = [
     23-6,
     document.querySelector('#time')
@@ -67,5 +68,6 @@ const setHours = () => {
 //     }
 // }
 
+/* -----FUNCTIONS----- */
 setTime();
 setNav();
