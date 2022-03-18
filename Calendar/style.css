@@ -1,7 +1,8 @@
+/* ------GLOBAL------ */
 body {
     display: grid;
     grid-template-areas: "banner banner"
-                         "sidebar content"
+                         "content content"
                          "footer footer";
     grid-template-columns: min-content;
 }
@@ -14,10 +15,33 @@ ul {
     list-style: none;
 }
 
-.hour h2 {
-    visibility: hidden;
+/* ------BANNER------ */
+#banner {
+    grid-area: banner;
+    background-color: bisque;
+    padding: .5em;
+    display: grid;
+    grid-template-areas: "logo staff-view week-view";
 }
 
+#logo {
+    grid-area: logo;
+    background: url("https://www.cia-france.com/francais-et-vous/images/7emes-Jeux-de-la-Francophonie-logo.jpg");
+    /* background-width: fit-content; */
+}
+
+nav {
+    background-color: antiquewhite;
+    grid-area: sidebar;
+    padding: .5em;
+}
+
+#staff-view {
+    grid-area: staff-view;
+    border: 3px solid black;
+}
+
+/* -----CALENDAR----- */
 #calendar {
     background-color: darkgray;
     color: white;
@@ -27,16 +51,9 @@ ul {
     padding: .5em;
 }
 
-nav {
-    background-color: antiquewhite;
-    grid-area: sidebar;
-    padding: .5em;
-}
-
-#banner {
-    grid-area: banner;
-    background-color: bisque;
-    padding: .5em;
+/* ~~~~~~~time~~~~~~~ */
+.hour h2 {
+    visibility: hidden;
 }
 
 [data-hour] {
@@ -45,6 +62,7 @@ nav {
     font-weight: 700;
 }
 
+/* ------FOOTER------ */
 footer {
     grid-area: footer;
     text-align: center;
