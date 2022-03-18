@@ -19,17 +19,37 @@
     </head>
 
     <body>
-        <nav id="sidebar">
+        <!-- <nav id="sidebar">
             <ul>
                 <li id="month" data-month-first="juin" data-month-second="juil."></li>
                 <li class="day" data-day="13"></li>
             </ul>
+        </nav> -->
+        <nav id="banner">
+            <div id="logo"></div>
+            <div id="staff-view">
+                <h2>L'horaire</h2>
+                <select name="staff" id="staff">
+                    <option value="general">Général</option>
+                    <option value="director">Directrice</option>
+                    <option value="head-prof">Prof Principal.e</option>
+                    <option value="prof-a">Prof #1</option>
+                    <option value="prof-b">Prof #2</option>
+                    <option value="prof-c">Prof #3</option>
+                    <option value="prof-d">Prof #4</option>
+                    <option value="head-mentor">Mono Principal.e</option>
+                    <option value="mentor-a">Mono #1</option>
+                    <option value="mentor-b">Mono #2</option>
+                    <option value="mentor-c">Mono #3</option>
+                    <option value="mentor-d">Mono #4</option>
+                    <option value="mentor-e">Mono #5</option>
+                </select>
+            </div>
+            <div id="week-view"></div>
         </nav>
-        <div id="banner">banner</div>
         <div id="calendar">
             <div id="time">
                 <div class="hour">
-                    <h2>TIME</h2>
                     <div data-hour="6"></div>
                     <div class="minute unmark" data-minute="5">5</div>
                     <div class="minute unmark"></div>
@@ -45,9 +65,9 @@
                 </div>
             </div>
             <div class="day" data-week="1">
-                <h2>Day</h2>
+                <h3>Day</h3>
                 <div class="event">
-                    <h3>Event</h3>
+                    <h4>Event</h4>
                     <p>
                         <span class="description">Desc</span>
                         <span class="staff">Staff</span>
