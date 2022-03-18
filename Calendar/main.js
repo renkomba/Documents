@@ -1,6 +1,8 @@
 /* -----BANNER----- */
 let staffView = document.querySelector('#staff-view');
 let staff = staffView.querySelector('select');
+let calStrip = document.querySelector('#cal-strip');
+let rows = calStrip.querySelector('tbody').children;
 
 // if the selected <option> changes do one of two things:
 // remove " de " from <label> if staff.value === general
@@ -11,6 +13,23 @@ const changeLabel = () => {
     let text = label.dataset.ogLabel;
 
     label.innerHTML = selectedStaff === 'general' ? text : `${text} de `;
+}
+
+const fillCalStrip = () => {
+    debugger;
+    let tbody = calStrip.querySelector('tbody');
+    let rows = tbody.children;
+    let templateRow = rows[0].cloneNode(true);
+
+    while (rows.length < 3) tbody.appendChild(templateRow);
+
+    for (let i=1; i<3; i++) {
+        let row = rows[i];
+        for (let datum of row) {
+            let a = datum.children[0];
+            a.innerHTML = parseInt(a.innerHTML) + (7 * i);
+        }
+    }
 }
 
 
@@ -87,4 +106,5 @@ const setHours = () => {
 /* -----FUNCTIONS----- */
 document.addEventListener('change', changeLabel);
 setTime();
+fillCalStrip();
 // setNav();

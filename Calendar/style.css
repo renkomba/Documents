@@ -41,6 +41,11 @@ nav {
     border: 3px solid black;
 }
 
+#week-view {
+    grid-area: week-view;
+    border: 3px solid red;
+}
+
 /* -----CALENDAR----- */
 #calendar {
     background-color: darkgray;
