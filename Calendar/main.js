@@ -1,11 +1,15 @@
 /* -----BANNER----- */
 let staffView = document.querySelector('#staff-view');
 let staff = staffView.querySelector('select');
+
+// if the selected <option> changes do one of two things:
+// remove " de " from <label> if staff.value === general
+// else, add " de "
 const changeLabel = () => {
     let selectedStaff = staff.value;
     let label = staffView.querySelector('label');
     let text = label.dataset.ogLabel;
-    
+
     label.innerHTML = selectedStaff === 'general' ? text : `${text} de `;
 }
 
