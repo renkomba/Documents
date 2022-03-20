@@ -15,6 +15,8 @@ const changeLabel = () => {
     label.innerHTML = selectedStaff === 'general' ? text : `${text} de `;
 }
 
+// Populate the cal strip with a table of the week, days,
+// month, and carets as arrows
 const fillCalStrip = () => {
     debugger;
     let tbody = calStrip.querySelector('tbody');
@@ -73,38 +75,8 @@ const setHours = () => {
         hourDivs[i].innerHTML = hourDivs[i].dataset.hour;
     }
 }
-
-/* VERTICAL NAVBAR */
-// const setNav = () => {
-    //     let [month, navList, day, days] = [
-        //         document.querySelector('#month'),
-        //         document.querySelector('ul'),
-        //         document.querySelector('[data-day]'),
-        //         document.querySelectorAll('[data-day]')
-        //     ];
-        
-        //     let dayNum = parseInt(day.dataset.day);
-        
-        //     day.innerHTML = dayNum;
-        //     month.innerHTML = month.dataset.monthFirst;
-        
-        //     while (dayNum !== 9) {
-            //         navList.appendChild(document.querySelector('[data-day]').cloneNode(true));
-            //         dayNum = dayNum === 30 ? 1 : dayNum+1;
-            //     }
-            // }
-            
-            // const setDays = () => {
-                //     let days = document.querySelectorAll('[data-day]');
-                
-                //     for (let i=0; i<days.length; i++) {
-                    //         days[i].dataset.day = parseInt(days[i].dataset.day) + i;
-                    //         days[i].innerHTML = days[i].dataset.day;
-                    //     }
-                    // }
                     
 /* -----FUNCTIONS----- */
 document.addEventListener('change', changeLabel);
 setTime();
 fillCalStrip();
-// setNav();
