@@ -64,6 +64,8 @@ const labelTooltips = () => {
     }
 }
 
+// For each .new-word, toggle data attributes depending on
+// whether the innerHTML.isOriginal 
 const activateTooltips = () => {
     for (let word of newWords) {
         word.addEventListener('click', () => {
