@@ -83,6 +83,7 @@ const activateTooltips = () => {
 const copyButton = document.querySelector('#copy');
 
 // copy #code innerHTML to clipboard when you click on var copyButton
+// navigator.clipboard... is deprecated
 copyButton.addEventListener('click', () => {
     let schoologyCode = document.querySelector('#code').innerHTML;
     
